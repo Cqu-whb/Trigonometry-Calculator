@@ -22,7 +22,7 @@ function varargout = zyq(varargin)
 
 % Edit the above text to modify the response to help zyq
 
-% Last Modified by GUIDE v2.5 22-Jun-2021 22:01:28
+% Last Modified by GUIDE v2.5 23-Jun-2021 15:27:06
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -76,17 +76,7 @@ function varargout = zyq_OutputFcn(hObject, eventdata, handles)
 varargout{1} = handles.output;
 
 
-% --- Executes on button press in pushbutton1.按键7
-function pushbutton1_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton1 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-textString = get(handles.edit1,'String');
-textString = strcat(textString,'7');
-set(handles.edit1,'String',textString);
-guidata(hObject, handles);
-
-%表达式框
+% --- 表达式框
 function edit1_Callback(hObject, eventdata, handles)
 % hObject    handle to edit1 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
@@ -102,40 +92,36 @@ function edit1_CreateFcn(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
-% Hint: edit controls usually have a white background on Windows.
-%       See ISPC and COMPUTER.
+
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
 
-%计算结果框
+% --- 计算结果框
 function edit2_Callback(hObject, eventdata, handles)
 % hObject    handle to edit2 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit2 as text
-%        str2double(get(hObject,'String')) returns contents of edit2 as a double
-
 
 % --- Executes during object creation, after setting all properties.
 function edit2_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit2 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    empty - handles not created until after all CreateFcns called
-
-% Hint: edit controls usually have a white background on Windows.
-%       See ISPC and COMPUTER.
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
 
+% --- Executes on button press in pushbutton1.按键7
+function pushbutton1_Callback(hObject, eventdata, handles)
+% hObject    handle to pushbutton1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+textString = get(handles.edit1,'String');
+textString = strcat(textString,'7');
+set(handles.edit1,'String',textString);
+guidata(hObject, handles);
 
 % --- Executes on button press in pushbutton2.按键8
 function pushbutton2_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton2 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'8');
     set(handles.edit1,'String',textString);
@@ -177,25 +163,10 @@ function pushbutton7_Callback(hObject, eventdata, handles)
     set(handles.edit1,'String',textString);
     guidata(hObject, handles);
 
-
-% --- Executes on button press in pushbutton8.按键sin
-function pushbutton8_Callback(hObject, eventdata, handles)
-    textString = get(handles.edit1,'String');
-    textString = strcat(textString,'zsin');
-    set(handles.edit1,'String',textString);
-    guidata(hObject, handles);
-
 % --- Executes on button press in pushbutton9.按键6
 function pushbutton9_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'6');
-    set(handles.edit1,'String',textString);
-    guidata(hObject, handles);
-
-% --- Executes on button press in pushbutton10.按键cos
-function pushbutton10_Callback(hObject, eventdata, handles)
-    textString = get(handles.edit1,'String');
-    textString = strcat(textString,'cos');
     set(handles.edit1,'String',textString);
     guidata(hObject, handles);
 
@@ -254,7 +225,12 @@ function pushbutton18_Callback(hObject, eventdata, handles)
     textString = strcat(textString,'.');
     set(handles.edit1,'String',textString);
     guidata(hObject, handles);
-
+% --- Executes on button press in pushbutton22.按键-
+function pushbutton22_Callback(hObject, eventdata, handles)
+    textString = get(handles.edit1,'String');
+    textString = strcat(textString,'-');
+    set(handles.edit1,'String',textString);
+    guidata(hObject, handles);
 
 % --- Executes on button press in pushbutton19.按键计算
 function pushbutton19_Callback(hObject, eventdata, handles)
@@ -263,34 +239,79 @@ function pushbutton19_Callback(hObject, eventdata, handles)
     set(handles.edit2,'String',aa);
     guidata(hObject, handles);
 
+    
+% --- Executes on button press in pushbutton8.按键sin
+function pushbutton8_Callback(hObject, eventdata, handles)
+    textString = get(handles.edit1,'String');
+    textString = strcat(textString,'zyq_sin');
+    set(handles.edit1,'String',textString);
+    guidata(hObject, handles);
 
+% --- Executes on button press in pushbutton10.按键cos
+function pushbutton10_Callback(hObject, eventdata, handles)
+    textString = get(handles.edit1,'String');
+    textString = strcat(textString,'lu_cos');
+    set(handles.edit1,'String',textString);
+    guidata(hObject, handles);
+    
 % --- Executes on button press in pushbutton20.按键arcsin
 function pushbutton20_Callback(hObject, eventdata, handles)
+   
     textString = get(handles.edit1,'String');
-    textString = strcat(textString,'arcsin');
+    textString = strcat(textString,'whb_arcsin');
     set(handles.edit1,'String',textString);
     guidata(hObject, handles);
 
 % --- Executes on button press in pushbutton21.按键arccos
 function pushbutton21_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
-    textString = strcat(textString,'arccos');
+    textString = strcat(textString,'yjy_arccos');
     set(handles.edit1,'String',textString);
     guidata(hObject, handles);
+    
+% --- Executes on button press in pushbutton23.按键tan
+function pushbutton23_Callback(hObject, eventdata, handles)
+    textString = get(handles.edit1,'String');
+    textString = strcat(textString,'xf_tan');
+    set(handles.edit1,'String',textString);
+    guidata(hObject, handles);    
 
-%sin函数
-function result=zsin(angle)
-	angle = 3.141592 * (angle / 180);		    
-	result = 0;  
-	s = 1;						
-	denominator = 1;				
-	numerator = angle;			
-	i=1;
-while numerator / denominator >= 1e-6
-    result = result + s * numerator / denominator;			
+%sin函数计算
+function result=zyq_sin(angle)
+    if angle >= 0
+        angle = pi * (angle / 180);		    
+        result = 0;  
+        s = 1;						
+        denominator = 1;				
+        numerator = angle;			
+        i=1;
+        while numerator / denominator >= 1e-10
+            result = result + s * numerator / denominator;
+            numerator = numerator* angle * angle;
+            denominator = denominator * 2 * i * (2 * i + 1);
+            s =s * -1;
+            i = i + 1;
+        end
+    else
+        angle = pi * (abs(angle) / 180);
+        result = 0;  
+        s = 1;						
+        denominator = 1;				
+        numerator = angle;			
+        i=1;
+        while numerator / denominator >= 1e-10
+            result = result + s * numerator / denominator;
+            numerator = numerator* angle * angle;
+            denominator = denominator * 2 * i * (2 * i + 1);
+            s =s * -1;
+            i = i + 1;
+        end
+        result = -result;
+    end
 
-	numerator = numerator* angle * angle;				
-	denominator = denominator * 2 * i * (2 * i + 1);		
-	s =s * -1;
-    i = i + 1;
-end
+
+% --- Executes during object creation, after setting all properties.
+function pushbutton20_CreateFcn(hObject, ~, handles)
+% hObject    handle to pushbutton20 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
