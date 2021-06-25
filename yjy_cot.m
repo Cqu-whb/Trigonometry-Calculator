@@ -18,6 +18,7 @@ function y = yjy_cot(x)
 	if (-0.007 < y < 0.007)
 		y = 0;
     end
+    y = roundn(y,-2);
 end
 
 
