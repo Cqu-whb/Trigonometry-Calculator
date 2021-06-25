@@ -13,4 +13,4 @@ while abs(sub_result) >= 1e-6
 	denominator	= denominator + 2	
 	sub_result = symbol * angle ^ 2 / factorial(denominator)
 end
-sub_result = roundn(sub_result,-2);
+result = roundn(result,-2);
