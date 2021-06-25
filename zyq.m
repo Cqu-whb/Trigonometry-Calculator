@@ -52,7 +52,7 @@ function varargout = zyq_OutputFcn(hObject, eventdata, handles)
 varargout{1} = handles.output;
 
 
-% --- ±í´ïÊ½¿ò
+% --- Â±Ã­Â´Ã¯ÃŠÂ½Â¿Ã²
 function edit1_Callback(hObject, eventdata, handles)
 % hObject    handle to edit1 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
@@ -73,7 +73,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 
-% --- ¼ÆËã½á¹û¿ò
+% --- Â¼Ã†Ã‹Ã£Â½Ã¡Â¹Ã»Â¿Ã²
 function edit2_Callback(hObject, eventdata, handles)
 % hObject    handle to edit2 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
@@ -86,7 +86,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 
-% --- Executes on button press in pushbutton1.°´¼ü7
+% --- Executes on button press in pushbutton1.Â°Â´Â¼Ã¼7
 function pushbutton1_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton1 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
@@ -96,28 +96,28 @@ textString = strcat(textString,'7');
 set(handles.edit1,'String',textString);
 guidata(hObject, handles);
 
-% --- Executes on button press in pushbutton2.°´¼ü8
+% --- Executes on button press in pushbutton2.Â°Â´Â¼Ã¼8
 function pushbutton2_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'8');
     set(handles.edit1,'String',textString);
     guidata(hObject, handles);
 
-% --- Executes on button press in pushbutton3.°´¼ü9
+% --- Executes on button press in pushbutton3.Â°Â´Â¼Ã¼9
 function pushbutton3_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'9');
     set(handles.edit1,'String',textString);
     guidata(hObject, handles);
 
-% --- Executes on button press in pushbutton4.°´¼ü0
+% --- Executes on button press in pushbutton4.Â°Â´Â¼Ã¼0
 function pushbutton4_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'0');
     set(handles.edit1,'String',textString);
     guidata(hObject, handles);
 
-% --- Executes on button press in pushbutton5.°´¼üAE
+% --- Executes on button press in pushbutton5.Â°Â´Â¼Ã¼AE
 function pushbutton5_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = get(handles.edit2,'String');
@@ -125,28 +125,28 @@ function pushbutton5_Callback(hObject, eventdata, handles)
     set(handles.edit2,'String','');
     guidata(hObject, handles);
 
-% --- Executes on button press in pushbutton6.°´¼ü4
+% --- Executes on button press in pushbutton6.Â°Â´Â¼Ã¼4
 function pushbutton6_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'4');
     set(handles.edit1,'String',textString);
     guidata(hObject, handles);
 
-% --- Executes on button press in pushbutton7.°´¼ü5
+% --- Executes on button press in pushbutton7.Â°Â´Â¼Ã¼5
 function pushbutton7_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'5');
     set(handles.edit1,'String',textString);
     guidata(hObject, handles);
 
-% --- Executes on button press in pushbutton9.°´¼ü6
+% --- Executes on button press in pushbutton9.Â°Â´Â¼Ã¼6
 function pushbutton9_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'6');
     set(handles.edit1,'String',textString);
     guidata(hObject, handles);
 
-% --- Executes on button press in pushbutton11.°´¼ü1
+% --- Executes on button press in pushbutton11.Â°Â´Â¼Ã¼1
 function pushbutton11_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'1');
@@ -154,39 +154,39 @@ function pushbutton11_Callback(hObject, eventdata, handles)
     guidata(hObject, handles);
 
 
-% --- Executes on button press in pushbutton12.°´¼ü2
+% --- Executes on button press in pushbutton12.Â°Â´Â¼Ã¼2
 function pushbutton12_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'2');
     set(handles.edit1,'String',textString);
     guidata(hObject, handles);
 
-% --- Executes on button press in pushbutton13.°´¼ü3
+% --- Executes on button press in pushbutton13.Â°Â´Â¼Ã¼3
 function pushbutton13_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'3');
     set(handles.edit1,'String',textString);
     guidata(hObject, handles);
 
-% --- Executes on button press in pushbutton14.°´¼ü£¨
+% --- Executes on button press in pushbutton14.Â°Â´Â¼Ã¼Â£Â¨
 function pushbutton14_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'(');
     set(handles.edit1,'String',textString);
     guidata(hObject, handles);
 
-% --- Executes on button press in pushbutton15.°´¼ü£©
+% --- Executes on button press in pushbutton15.Â°Â´Â¼Ã¼Â£Â©
 function pushbutton15_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,')');
     set(handles.edit1,'String',textString);
     guidata(hObject, handles);
 
-% --- Executes on button press in pushbutton16.°´¼üÍË³ö
+% --- Executes on button press in pushbutton16.Â°Â´Â¼Ã¼ÃÃ‹Â³Ã¶
 function pushbutton16_Callback(hObject, eventdata, handles)
     close(gcf);
 
-% --- Executes on button press in pushbutton17.°´¼üback
+% --- Executes on button press in pushbutton17.Â°Â´Â¼Ã¼back
 function pushbutton17_Callback(hObject, eventdata, handles)
     textString=get(handles.edit1,'String');
     as=char(textString);
@@ -195,20 +195,20 @@ function pushbutton17_Callback(hObject, eventdata, handles)
     set(handles.edit1,'String',textString)
     guidata(hObject, handles);
 
-% --- Executes on button press in pushbutton18.°´¼ü.
+% --- Executes on button press in pushbutton18.Â°Â´Â¼Ã¼.
 function pushbutton18_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'.');
     set(handles.edit1,'String',textString);
     guidata(hObject, handles);
-% --- Executes on button press in pushbutton22.°´¼ü-
+% --- Executes on button press in pushbutton22.Â°Â´Â¼Ã¼-
 function pushbutton22_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'-');
     set(handles.edit1,'String',textString);
     guidata(hObject, handles);
 
-% --- Executes on button press in pushbutton19.°´¼ü¼ÆËã
+% --- Executes on button press in pushbutton19.Â°Â´Â¼Ã¼Â¼Ã†Ã‹Ã£
 function pushbutton19_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     aa = eval(textString);
@@ -216,21 +216,21 @@ function pushbutton19_Callback(hObject, eventdata, handles)
     guidata(hObject, handles);
 
     
-% --- Executes on button press in pushbutton8.°´¼üsin
+% --- Executes on button press in pushbutton8.Â°Â´Â¼Ã¼sin
 function pushbutton8_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'zyq_sin');
     set(handles.edit1,'String',textString);
     guidata(hObject, handles);
 
-% --- Executes on button press in pushbutton10.°´¼ücos
+% --- Executes on button press in pushbutton10.Â°Â´Â¼Ã¼cos
 function pushbutton10_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'lu_cos');
     set(handles.edit1,'String',textString);
     guidata(hObject, handles);
     
-% --- Executes on button press in pushbutton20.°´¼üarcsin
+% --- Executes on button press in pushbutton20.Â°Â´Â¼Ã¼arcsin
 function pushbutton20_Callback(hObject, eventdata, handles)
    
     textString = get(handles.edit1,'String');
@@ -238,21 +238,21 @@ function pushbutton20_Callback(hObject, eventdata, handles)
     set(handles.edit1,'String',textString);
     guidata(hObject, handles);
 
-% --- Executes on button press in pushbutton21.°´¼ücot
+% --- Executes on button press in pushbutton21.Â°Â´Â¼Ã¼cot
 function pushbutton21_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'yjy_cot');
     set(handles.edit1,'String',textString);
     guidata(hObject, handles);
     
-% --- Executes on button press in pushbutton23.°´¼ütan
+% --- Executes on button press in pushbutton23.Â°Â´Â¼Ã¼tan
 function pushbutton23_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'xf_tan');
     set(handles.edit1,'String',textString);
     guidata(hObject, handles);    
 
-%sinº¯Êý¼ÆËã
+%sinÂºÂ¯ÃŠÃ½Â¼Ã†Ã‹Ã£
 function result=zyq_sin(angle)
     if angle >= 0
         angle = pi * (angle / 180);		    
@@ -284,7 +284,7 @@ function result=zyq_sin(angle)
         end
         result = -result;
     end
-
+   result = roundn(result,-2);
 
 % --- Executes during object creation, after setting all properties.
 function pushbutton20_CreateFcn(hObject, ~, handles)
