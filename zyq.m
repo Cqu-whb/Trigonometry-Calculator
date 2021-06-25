@@ -1,28 +1,4 @@
 function varargout = zyq(varargin)
-% ZYQ MATLAB code for zyq.fig
-%      ZYQ, by itself, creates a new ZYQ or raises the existing
-%      singleton*.
-%
-%      H = ZYQ returns the handle to a new ZYQ or the handle to
-%      the existing singleton*.
-%
-%      ZYQ('CALLBACK',hObject,eventData,handles,...) calls the local
-%      function named CALLBACK in ZYQ.M with the given input arguments.
-%
-%      ZYQ('Property','Value',...) creates a new ZYQ or raises the
-%      existing singleton*.  Starting from the left, property value pairs are
-%      applied to the GUI before zyq_OpeningFcn gets called.  An
-%      unrecognized property name or invalid value makes property application
-%      stop.  All inputs are passed to zyq_OpeningFcn via varargin.
-%
-%      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one
-%      instance to run (singleton)".
-%
-% See also: GUIDE, GUIDATA, GUIHANDLES
-
-% Edit the above text to modify the response to help zyq
-
-% Last Modified by GUIDE v2.5 23-Jun-2021 15:27:06
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -262,10 +238,10 @@ function pushbutton20_Callback(hObject, eventdata, handles)
     set(handles.edit1,'String',textString);
     guidata(hObject, handles);
 
-% --- Executes on button press in pushbutton21.°´¼üarccos
+% --- Executes on button press in pushbutton21.°´¼ücot
 function pushbutton21_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
-    textString = strcat(textString,'yjy_arccos');
+    textString = strcat(textString,'yjy_cot');
     set(handles.edit1,'String',textString);
     guidata(hObject, handles);
     
