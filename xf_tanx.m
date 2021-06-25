@@ -1,6 +1,7 @@
 function m=xftan(x)
  x=x*pi/180;
 m=tanx(x);
+m = roundn(m,-2);
 
 %%
 function t=tanx(x)
