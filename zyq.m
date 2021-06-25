@@ -248,7 +248,7 @@ function pushbutton21_Callback(hObject, eventdata, handles)
 % --- Executes on button press in pushbutton23.°´¼ütan
 function pushbutton23_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
-    textString = strcat(textString,'xf_tan');
+    textString = strcat(textString,'xf_tanx');
     set(handles.edit1,'String',textString);
     guidata(hObject, handles);    
 
