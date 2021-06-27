@@ -13,8 +13,9 @@ double m;
      x=x-pi;
   end
  if x==pi/2
-     disp("error");
-     t=inf;
+      t=inf;
+      msgbox("输入无效，请重新输入！");
+     
  elseif x==0
      t=0;
  elseif x>0
