@@ -1,3 +1,4 @@
+
 function y = yjy_cot(x)
 	if x > 180 
 		quotient = x / 180;  
@@ -20,7 +21,3 @@ function y = yjy_cot(x)
     end
     y = roundn(y,-2);
 end
-
-
-    
-
