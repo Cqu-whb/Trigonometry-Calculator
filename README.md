@@ -1,2 +1,2 @@
 # Trigonometry-Calculator
-本部分实现sin计算功能
+此部分实现sin计算功能
