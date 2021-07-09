@@ -91,8 +91,7 @@ end
 if(num<-360)
     num=mod(num,-360);
 end
-num=num*pi/180;
-result=sin_result(num);
+result=zyq_sin(num);
 set(handles.edit2,'String',num2str(result));
 guidata(hObject,handles);
 
@@ -425,7 +424,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
 end
 
 
-% --- Executes on button press in pushbutton28.tanº¯Êı
+% --- Executes on button press in pushbutton28.tanÂºÂ¯ÃŠÃ½
 function pushbutton28_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton28 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
@@ -437,7 +436,7 @@ set(handles.edit2,'String',num2str(result));
 guidata(hObject,handles);
 
 
-% --- Executes on button press in pushbutton29.test°´Å¥
+% --- Executes on button press in pushbutton29.testÂ°Â´Ã…Â¥
 function pushbutton29_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton29 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
