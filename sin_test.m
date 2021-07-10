@@ -1,4 +1,4 @@
-function zyq_test()
+function sin_test()
     x = 1:360;
     for input = 1:360
         y1(input) = zyq_sin(input);
