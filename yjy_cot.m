@@ -20,7 +20,3 @@ function y = yjy_cot(x)
     end
     y = roundn(y,-2);
 end
-
-
-    
-
