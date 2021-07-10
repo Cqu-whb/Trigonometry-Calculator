@@ -215,7 +215,7 @@ function pushbutton11_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 textString=get(handles.edit1,'String');
 num=str2double(textString);
-result=whb_arcsin(num);
+result=arcsin_result(num);
 set(handles.edit2,'String',num2str(result));
 guidata(hObject,handles);
 
@@ -424,7 +424,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
 end
 
 
-% --- Executes on button press in pushbutton28.tan潞炉脢媒
+% --- Executes on button press in pushbutton28.tan函数
 function pushbutton28_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton28 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
@@ -436,34 +436,9 @@ set(handles.edit2,'String',num2str(result));
 guidata(hObject,handles);
 
 
-% --- Executes on button press in pushbutton29.test掳麓脜楼
+% --- Executes on button press in pushbutton29.test按钮
 function pushbutton29_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton29 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-%   本程序测试arctan函数计算结果的正确性
-%   本程序测试arcsin函数计算结果的正确性
-inputx = -1:0.001:1;
-dy = zeros(1,length(inputx));
-y1 = zeros(1,length(inputx));
-y2 = zeros(1,length(inputx));
-
-for i=1:2001
-    x = -1+(i-1)/1000;
-    [TaylorExpansion] = whb_arcsin(x);
-    y1(i) = TaylorExpansion;
-    y2(i) = asin(x);
-    y2(i) = roundn(rad2deg(y2(i)),-2);
-    dy = abs(y1-y2);
-end
-
-figure(1)
-subplot(3,1,1)
-plot(inputx,y1);
-title('输入“-1-1”不调用arcsin函数计算值');xlabel('输入值');ylabel('计算值');
-subplot(3,1,2)
-plot(inputx,y2);
-title('输入“-1-1”调用arcsin函数计算值');xlabel('输入值');ylabel('计算值');
-subplot(3,1,3)
-plot(inputx,dy);
-title('输入“-1-1”不调用arcsin函数与实际arcsin函数两者计算误差值');xlabel('输入值');ylabel('计算误差值');
+    test();
