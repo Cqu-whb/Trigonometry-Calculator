@@ -22,7 +22,7 @@ function varargout = GUI(varargin)
 
 % Edit the above text to modify the response to help GUI
 
-% Last Modified by GUIDE v2.5 07-Jul-2021 19:53:22
+% Last Modified by GUIDE v2.5 10-Jul-2021 21:37:46
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -158,8 +158,7 @@ end
 if(num<-360)
     num=mod(num,-360);
 end
-num=num*pi/180;
-result=cos_result(num);
+result=lu_cos(num);
 set(handles.edit2,'String',num2str(result));
 guidata(hObject,handles);
 
@@ -271,7 +270,7 @@ function pushbutton16_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 textString=get(handles.edit1,'String');
 num=str2double(textString);
-result=arctan_result(num);
+result=yjy_cot(num);
 set(handles.edit2,'String',num2str(result));
 guidata(hObject,handles);
 
@@ -444,7 +443,7 @@ function pushbutton29_Callback(hObject, eventdata, handles)
 %   本程序测试arctan函数计算结果的正确性
 %   本程序测试arcsin函数计算结果的正确性
 inputx = -1:0.001:1;
-dy = zeros(1,length(inputx));
+arcsin_dy = zeros(1,length(inputx));
 y1 = zeros(1,length(inputx));
 y2 = zeros(1,length(inputx));
 
@@ -454,16 +453,79 @@ for i=1:2001
     y1(i) = TaylorExpansion;
     y2(i) = asin(x);
     y2(i) = roundn(rad2deg(y2(i)),-2);
+    arcsin_dy = abs(y1-y2);
+end
+
+%   本程序测试cos函数计算结果的正确性
+sita = 1:1:360;
+cos_dy = zeros(1,length(sita));
+y1 = zeros(1,length(sita));
+y2 = zeros(1,length(sita));
+for i=1:360
+    x = i*(pi/180);
+    [TaylorExpansion] = lu_cos(i);
+    y1(i) = TaylorExpansion;
+    y2(i) = cos(x);
+    cos_dy = abs(y1-y2);
+end
+
+sita1 = 1:1:180;
+cot_dy = zeros(1,length(sita1));
+y1 = zeros(1,length(sita1));
+y2 = zeros(1,length(sita1));
+for i=1:180-1
+    [out] = yjy_cot(i);
+    y1(i) = out;
+    y2(i) = cosd(i)/sind(i);
+    cot_dy = abs(y1-y2);
+end
+
+sita = 1:1:360;
+sin_dy = zeros(1,length(sita));
+y1 = zeros(1,length(sita));
+y2 = zeros(1,length(sita));
+for i=1:360
+    x = i*(pi/180);
+    [TaylorExpansion] = zyq_sin(x);
+    y1(i) = TaylorExpansion;
+    y2(i) = sin(x);
+    sin_dy = abs(y1-y2);
+end
+
+inputx1 = -89:1:99;
+dy = zeros(1,length(inputx1));
+y1 = zeros(1,length(inputx1));
+y2 = zeros(1,length(inputx1));
+for i=1:length(inputx1)
+     x =i+(-92);
+    x=x*pi/180;
+    [TaylorExpansion] =xf_tanx(x);
+    y1(i) = TaylorExpansion;
+    y2(i) = tan(x);
     dy = abs(y1-y2);
 end
 
 figure(1)
-subplot(3,1,1)
-plot(inputx,y1);
-title('输入“-1-1”不调用arcsin函数计算值');xlabel('输入值');ylabel('计算值');
-subplot(3,1,2)
-plot(inputx,y2);
-title('输入“-1-1”调用arcsin函数计算值');xlabel('输入值');ylabel('计算值');
-subplot(3,1,3)
-plot(inputx,dy);
-title('输入“-1-1”不调用arcsin函数与实际arcsin函数两者计算误差值');xlabel('输入值');ylabel('计算误差值');
+subplot(5,1,1)
+plot(inputx,arcsin_dy);
+title('不调用arcsin函数与实际arcsin函数两者计算误差值');xlabel('输入值');ylabel('计算误差值');
+
+subplot(5,1,5)
+plot(inputx1,dy);
+title('不调用tan_dy函数与实际tan_dy函数两者计算误差值');xlabel('输入值');ylabel('计算误差值');
+
+
+subplot(5,1,3)
+plot(sita1,cot_dy);
+title('不调用cot_dy函数与实际cot_dy函数两者计算误差值');xlabel('输入值');ylabel('计算误差值');
+% 
+subplot(5,1,4)
+plot(sita,sin_dy);
+title('不调用sin_dy函数与实际sin_dy函数两者计算误差值');xlabel('输入值');ylabel('计算误差值');
+% 
+
+set(gca,'YLim',[0 1]);%X轴的数据显示范围
+set(gca,'YTick',[0:1:1]);%设置要显示坐标刻度
+subplot(5,1,2)
+plot(sita,cos_dy);
+title('不调用cos_dy函数与实际cos_dy函数两者计算误差值');xlabel('输入值');ylabel('计算误差值');
