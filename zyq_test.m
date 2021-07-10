@@ -1,4 +1,4 @@
-function test()
+function zyq_test()
     x = 1:360;
     for input = 1:360
         y1(input) = zyq_sin(input);
@@ -8,10 +8,10 @@ function test()
     figure(1);
     subplot(3,1,1);
     plot(x,y1);
-    title('×Ô±àsinº¯Êý¼ÆËã½á¹ûÍ¼'); xlabel('½Ç¶È'); ylabel('sin¼ÆËãÖµ');
+    title('è‡ªç¼–sinå‡½æ•°è®¡ç®—ç»“æžœå›¾'); xlabel('è§’åº¦'); ylabel('sinè®¡ç®—å€¼');
     subplot(3,1,2);
     plot(x,y2);
-    title('ÏµÍ³sinº¯Êý¼ÆËã½á¹ûÍ¼'); xlabel('½Ç¶È'); ylabel('sin¼ÆËãÖµ');
+    title('ç³»ç»Ÿsinå‡½æ•°è®¡ç®—ç»“æžœå›¾'); xlabel('è§’åº¦'); ylabel('sinè®¡ç®—å€¼');
     subplot(3,1,3);
     plot(x,error);
-    title('¼ÆËãÎó²îÍ¼'); xlabel('½Ç¶È'); ylabel('¼ÆËãÎó²î');
+    title('è®¡ç®—è¯¯å·®å›¾'); xlabel('è§’åº¦'); ylabel('è®¡ç®—è¯¯å·®');
